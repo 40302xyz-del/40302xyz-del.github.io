@@ -50,41 +50,61 @@ body {
     border-radius: 10px;
     cursor: pointer;
 }
-.start-btn:hover {transform: scale(1.08);}
-.start-btn2:hover {transform: scale(1.08);}
-.start-btn3:hover {transform: scale(1.08);}
-.start-btn4:hover {transform: scale(1.08);}
-.start-btn5:hover {transform: scale(1.08);}
-.start-btn6:hover {transform: scale(1.08);}
-.start-btn7:hover {transform: scale(1.08);}
-.start-btn8:hover {transform: scale(1.08);}
-.start-btn9:hover {transform: scale(1.08);}
-.start-btn10:hover {transform: scale(1.08);}
-.start-btn11:hover {transform: scale(1.08);}
-.start-btn12:hover {transform: scale(1.08);}
-.start-btn13:hover {transform: scale(1.08);}
+/* 图片按钮通用样式（保留不变，仅删除原悬浮按压） */
+.start-btn, .start-btn2, .start-btn3, .start-btn4, .start-btn5, .start-btn6,
+.start-btn7, .start-btn8, .start-btn9, .start-btn10, .start-btn11, .start-btn12, .start-btn13 {
+    display: block;
+    object-fit: cover;
+    border: none;
+    outline: none;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    cursor: pointer;
+}
 
+/* ===================== 统一悬浮+按压效果（视觉比例一致） ===================== */
+/* 按钮1-6：无基础缩放 → 悬浮1.1倍，按压0.94倍 */
+.start-btn:hover {transform: scale(1.1);}
 .start-btn:active {transform: scale(0.94);}
+.start-btn2:hover {transform: scale(1.1);}
 .start-btn2:active {transform: scale(0.94);}
+.start-btn3:hover {transform: scale(1.1);}
 .start-btn3:active {transform: scale(0.94);}
+.start-btn4:hover {transform: scale(1.1);}
 .start-btn4:active {transform: scale(0.94);}
+.start-btn5:hover {transform: scale(1.1);}
 .start-btn5:active {transform: scale(0.94);}
+.start-btn6:hover {transform: scale(1.1);}
 .start-btn6:active {transform: scale(0.94);}
-.start-btn7:active {transform: scale(0.94);}
-.start-btn8:active {transform: scale(0.94);}
-.start-btn9:active {transform: scale(0.94);}
-.start-btn10:active {transform: scale(0.94);}
-.start-btn11:active {transform: scale(0.94);}
-.start-btn12:active {transform: scale(0.94);}
-.start-btn13:active {transform: scale(0.94);}
+
+/* 按钮7-9：基础scale(0.6) → 悬浮0.66倍(0.6×1.1)，按压0.564倍(0.6×0.94) */
+.start-btn7:hover {transform: scale(0.66);}
+.start-btn7:active {transform: scale(0.564);}
+.start-btn8:hover {transform: scale(0.66);}
+.start-btn8:active {transform: scale(0.564);}
+.start-btn9:hover {transform: scale(0.66);}
+.start-btn9:active {transform: scale(0.564);}
+
+/* 按钮10-11：基础scale(1.7) → 悬浮1.87倍(1.7×1.1)，按压1.598倍(1.7×0.94) */
+.start-btn10:hover {transform: scale(1.87);}
+.start-btn10:active {transform: scale(1.598);}
+.start-btn11:hover {transform: scale(1.87);}
+.start-btn11:active {transform: scale(1.598);}
+
+/* 按钮12-13：基础scale(0.5) → 悬浮0.55倍(0.5×1.1)，按压0.47倍(0.5×0.94) */
+.start-btn12:hover {transform: scale(0.55);}
+.start-btn12:active {transform: scale(0.47);}
+.start-btn13:hover {transform: scale(0.55);}
+.start-btn13:active {transform: scale(0.47);}
 
 /* 按钮7-聊天 */
 .start-btn7 {
     position: absolute;
-    bottom: 70%;  
-    left: 5%;   
-    width: 20%;   
-    height: 10%;  
+    bottom: -0.6%;  
+    left: 3%;   
+    width: 22%;   
+    height: 11%;  
+    transform: scale(0.6); 
 }
 
 /* 按钮2-排行榜 */
@@ -99,26 +119,28 @@ body {
 /* 按钮8-拍照 */
 .start-btn8 {
     position: absolute;
-    bottom: 75%;  
-    left: 30%;   
-    width: 20%;   
-    height: 10%;  
+    bottom: -0.2%;  
+    left: 49.3%;   
+    width: 24%;   
+    height: 10%; 
+    transform: scale(0.6);  
 }
 
 /* 按钮9-我的 */
 .start-btn9 {
     position: absolute;
-    bottom: 80%;  
-    left: 55%;   
-    width: 20%;   
-    height: 10%;  
+    bottom: -1%;  
+    left: 74%;   
+    width: 22%;   
+    height: 13%;  
+    transform: scale(0.6); 
 }
 
 /* 按钮5-书包 */
 .start-btn5 {
     position: absolute;
     bottom: 12%;  
-    left: 0.5%;   
+    left: 2%;   
     width: 11%;    
     height: 6%;   
 }
@@ -144,10 +166,11 @@ body {
 /* 按钮10-碳牌收益所 */
 .start-btn10 {
     position: absolute;
-    bottom: 35%;  
-    left: 50%;   
-    width: 20%;   
+    bottom: 23%;  
+    left: 70%;   
+    width: 22%;   
     height: 10%;  
+    transform: scale(1.7); 
 }
 
 /* 按钮3-超市 */
@@ -162,10 +185,11 @@ body {
 /* 按钮11-市政厅 */
 .start-btn11 {
     position: absolute;
-    bottom: 40%;  
-    left: 75%;   
+    bottom: 48%;  
+    left: 69%;   
     width: 20%;   
-    height: 10%;  
+    height: 12%; 
+    transform: scale(1.7); 
 }
 
 /* 按钮4-工厂 */
@@ -180,19 +204,21 @@ body {
 /* 按钮12-碳牌加 */
 .start-btn12 {
     position: absolute;
-    bottom: 5%;   
-    left: 55%;   
-    width: 20%;   
-    height: 10%;  
+    bottom: 91.5%;   
+    left: 30%;   
+    width: 50%;   
+    height: 8%;  
+    transform: scale(0.5);
 }
 
 /* 按钮13-叶子加 */
 .start-btn13 {
     position: absolute;
-    bottom: 18%;  
-    left: 45%;   
-    width: 20%;   
-    height: 10%;  
+    bottom: 92%;  
+    left: 56%;   
+    width: 50%;   
+    height: 8%;  
+    transform: scale(0.5);
 }
 
 /* 关闭按钮（不变） */
@@ -230,19 +256,19 @@ body {
     <!-- 原有页面 -->
     <img id="page1" class="page active" src="./img1.png">
     <img id="page2" class="page" src="./jinchahua.png">
-    <img id="page4" class="page" src="./img3.jpg">
-    <img id="page5" class="page" src="./img2.jpg">
-    <img id="page6" class="page" src="./img4.jpg">
-    <img id="page7" class="page" src="./img4.jpg">
-    <img id="page8" class="page" src="./img4.jpg">
+    <img id="page4" class="page" src="./img3.png">
+    <img id="page5" class="page" src="./img2.png">
+    <img id="page6" class="page" src="./img4.png">
+    <img id="page7" class="page" src="./img4.png">//书包
+    <img id="page8" class="page" src="./img4.pn">//不知道
     <!-- 新增7个页面（page9~page15） -->
-    <img id="page9" class="page" src="./img5.jpg">
-    <img id="page10" class="page" src="./img6.jpg">
-    <img id="page11" class="page" src="./img7.jpg">
-    <img id="page12" class="page" src="./img8.jpg">
-    <img id="page13" class="page" src="./img9.jpg">
-    <img id="page14" class="page" src="./img10.jpg">
-    <img id="page15" class="page" src="./img11.jpg">
+    <img id="page9" class="page" src="./img5.png">//聊天
+    <img id="page10" class="page" src="./img5.png">//拍照
+    <img id="page11" class="page" src="./img5.png">//我的
+    <img id="page12" class="page" src="./img5.png">//碳牌收益所
+    <img id="page13" class="page" src="./img5.png">//市政厅
+    <img id="page14" class="page" src="./img5.png">//碳牌
+    <img id="page15" class="page" src="./img11.jpg">//叶子
 
     <!-- 原有6个按钮 -->
     <img id="startBtn" class="start-btn" onclick="nextPage(); createRipple(this)" src="./Button1.png">
@@ -272,36 +298,36 @@ const closeBtn = document.getElementById("closeBtn");
 // 关闭按钮配置（新增page9~15）
 const closeBtnConfig = {
     2: { 
-        top: "15%", right: "40%", src: "./Return1.png", width: "6%", height: "3.5%"
+        top: "25%", right: "4%", src: "./Return2_Notebook.png", width: "9%", height: "5.25%"
     },
     4: { 
-        top: "50%", left: "5%", transform: "translateY(-50%)", src: "./Return.png", width: "6%", height: "3.5%"
+        top: "4.6%", left: "2%", transform: "translateY(-50%)", src: "./Return4_Rank.png", width: "9%", height: "5.25%"
     },
     5: { 
-        bottom: "5%", right: "5%", src: "./Return.png", width: "6%", height: "3.5%"
+        bottom: "92.5%", right: "86%", src: "./Return5_Surpermarket.png", width: "9.9%", height: "5.775%"
     },
     6: { 
-        top: "1%", left: "80%", src: "./Return6.png", width: "6%", height: "3.5%"
+        top: "2%", left: "4%", src: "./Return6_Factory.png", width: "9.9%", height: "5.775%"
     },
     7: { 
-        bottom: "8%", left: "8%", src: "./Return.png", width: "6%", height: "3.5%"
+        bottom: "8%", left: "8%", src: "./Return7_Bag.png", width: "6%", height: "3.5%"
     },
     8: { 
-        top: "50%", right: "5%", transform: "translateY(-50%)", src: "./Return.png", width: "6%", height: "3.5%"
+        top: "50%", right: "5%", transform: "translateY(-50%)", src: "./Return8_Home.png", width: "6%", height: "3.5%"
     },
     // 新增7个页面返回按钮配置
     9: { 
-        top: "5%", right: "5%", src: "./Return.png", width: "6%", height: "3.5%"
-    },
+        top: "4%", right: "86%", src: "./Return9_Chat.png", width: "9.9%", height: "5.775%"
+    },//聊天
     10: { 
-        top: "10%", left: "5%", src: "./Return.png", width: "6%", height: "3.5%"
-    },
+        top: "4%", right: "86%", src: "./Return10_Camera.png", width: "9.9%", height: "5.775%"
+    },//拍照
     11: { 
-        bottom: "10%", right: "10%", src: "./Return.png", width: "6%", height: "3.5%"
-    },
+        top: "4%", right: "86%", src: "./Return11_My.png", width: "9.9%", height: "5.775%"
+    },//我的
     12: { 
-        top: "50%", left: "10%", transform: "translateY(-50%)", src: "./Return.png", width: "6%", height: "3.5%"
-    },
+        top: "50%", left: "10%", transform: "translateY(-50%)", src: "./Return12_Income_Institute.png", width: "6%", height: "3.5%"
+    },//收益所
     13: { 
         top: "50%", right: "10%", transform: "translateY(-50%)", src: "./Return.png", width: "6%", height: "3.5%"
     },
